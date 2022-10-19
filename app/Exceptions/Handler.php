@@ -85,7 +85,7 @@ class Handler extends ExceptionHandler
 //            if(request()->method() == 'POST'){
 //                dd($e->getMessage(), $e->getCode());
 //            }
-//            dd($e);
+            dd($e);
             if(isset($_GET['db'])){
                 dd($e);
             }

@@ -1,0 +1,60 @@
+// Theme Colors.
+$yellow: #f0ad4e;
+$cyan: #5bc0de;
+$blue: #0d6efd ;
+$light:#f8f9fa;
+$dark:#212529;
+$white:#ffff;
+
+$primary:#005eb7;// #000000;
+$secondary: #d75c4b;
+$success: #08a643;
+$info: $cyan;
+$warning: #ffc107;
+$danger: #dc3545;
+
+
+// Custom Colors
+$color-accent:orange;
+$color-1: #ffffff;
+$color-2: #3c9edd;
+$color-3: #c0c0c0;
+$color-4: #e0e0e0;
+$color-5: #e0e0e0;
+$color-6: #333333;
+$color-true: #67cd7a;
+$color-false: #d75c4b;
+
+
+// Body.
+$body-bg: #f2f2f2;
+$body-color:$dark ;// $primary;
+$color-text-contrast: white; // used in contrast with primary and secondary color
+
+// Typography
+$font-family-sans-serif: 'Tomaho', sans-serif;
+$font-family-icons: 'Font Awesome 5 Free';
+$font-size-base: 1rem;
+$line-height-base: 1.4;
+
+// Links
+$link-hover-decoration: none;
+
+// Theme colors.
+$theme-colors: (
+    "primary":    $primary,
+    "secondary":  $secondary,
+    "success":    $success,
+    "info":       $info,
+    "warning":    $warning,
+    "danger":     $danger,
+    "light":      $light,
+    "dark":       $dark,
+    'accent':     $color-accent,
+    'color-2': $color-2,
+    'color-3': $color-3,
+    'color-4': $color-4,
+    'color-5': $color-5,
+    'color-6': $color-6,
+);
+

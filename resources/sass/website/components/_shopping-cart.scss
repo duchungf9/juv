@@ -1,0 +1,250 @@
+
+.shopping-cart-box {
+  list-style: none;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0;
+}
+
+.shopping-cart {
+  .nav-link{
+    color: $navbar-color;
+  }
+  .shopping-cart-count {
+    border-radius: 50%;
+    position: absolute;
+    top: 2px;
+    right: 1px;
+    padding: 0.25rem 0.4rem;
+  }
+
+  .dropdown-menu {
+    font-size: 0.8rem;
+    padding-top: 0;
+    padding-bottom: 0.25rem;
+
+    .dropdown-item {
+      position: relative;
+      padding: 0.5rem 2.5rem 0.5rem 0.5rem;
+      line-height: 1.1rem;
+
+      &:active {
+        background: transparent;
+      }
+
+      &:nth-child(odd) {
+        background: #e6e6e6;
+      }
+
+      &.checkout-link {
+        padding: 0.5rem 0.5rem 0.5rem;
+        background: #ffffff;
+        border-bottom: 1px solid #e6e6e6;
+      }
+
+      .shopping-cart-item {
+        display: flex;
+        align-items: flex-start;
+
+        .shopping-cart-item-body {
+          flex: 1;
+        }
+      }
+
+      .shopping-cart-delete {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer
+      }
+
+      img {
+        width: 50px;
+        height: 50px;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+
+  .btn-checkout {
+    padding: 0.25rem
+  }
+}
+
+.shopping-cart-image-preview {
+  width: 60px;
+  height: 60px;
+}
+
+.card {
+  border: 1px solid rgba(239, 239, 239, 0.55);
+
+  &.cart-summary {
+    margin: 1rem 0px;
+
+    @include media-breakpoint-up(md) {
+      margin: 0px;
+    }
+  }
+
+
+  &.cart__discount {
+    margin-top: 1rem;
+  }
+
+  .cart-summary {
+    border: 1px solid rgba(239, 239, 239, 0.55);
+
+    &-totals {
+      font-size: 1.1rem;
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.05);;
+      padding: 0.2rem 0.5rem;
+      margin-top: .315rem
+    }
+
+    &-line {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: .5rem;
+
+      .label {
+        padding-left: 0;
+        white-space: inherit;
+        color: $color-text;
+      }
+
+      .value {
+        color: $color-text;
+        text-align: right;
+      }
+    }
+  }
+}
+
+#cartSummaryDetail {
+
+  .media-list {
+    padding-left: 0px;
+  }
+
+  .media-left {
+    padding: 0.25rem 0.75rem 0rem 0rem ;
+
+    img {
+      width: 75px;
+    }
+  }
+
+  .media-body {
+    line-height: 1.5rem;
+  }
+
+}
+
+.cart-resume {
+  margin-bottom: 0px;
+
+  thead th {
+    border-bottom:  0px solid rgba(0, 0, 0, 0.25);
+    padding: 0.75rem 0.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.25) ;
+    @include media-breakpoint-up($navbar-trigger) {
+      padding: 0.75rem
+    }
+  }
+
+  tbody td {
+    padding: 0.75rem 0.25rem;
+    vertical-align: top;
+    border-top: 1px solid rgba(0, 0, 0, 0.25);
+    border-bottom: 0px solid $color-secondary;
+    @include media-breakpoint-up($navbar-trigger) {
+      padding: 0.75rem
+    }
+  }
+
+
+  .cart__product-price {
+    min-width: 100px;
+    text-align: right;
+  }
+
+  .cart__product-action {
+    width: 30px;
+  }
+
+
+  .product-price {
+    font-weight: bold;
+    color: $color-accent;
+  }
+
+  .product-price-total {
+    color: $color-text;
+    margin-top: 0.5rem;
+    min-width: 75px;
+    text-align: right;
+    @include media-breakpoint-up($navbar-trigger) {
+      font-weight: bold;
+    }
+  }
+
+  .product-description {
+    min-width: 100px;
+  }
+
+  .product-action {
+    width: 25px;
+  }
+
+  .product-quantity {
+    min-width: 110px !important;
+    width: 120px;
+    @include media-breakpoint-up($navbar-trigger) {
+      width: 150px;
+    }
+  }
+
+  i {
+    margin-top: 0.5rem;
+  }
+}
+.order{
+  &-info{
+    padding:0.75rem;
+    @include media-breakpoint-up($navbar-trigger) {
+     padding:1rem
+    }
+
+  }
+  &-step {
+    color: $color-text;
+    padding: 1rem 0rem 1rem;
+
+    &-title {
+      margin: 0rem;
+      color: $color-text;
+      border-top: 3px solid $color-4;
+      padding: 1.5rem 0rem 1.5rem;
+    }
+
+    &-resume-title {
+      margin: 0rem;
+      color: $color-text;
+      padding: 0rem 0rem 0.5rem;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+

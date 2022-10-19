@@ -1,0 +1,30 @@
+
+.payment_method {
+  &:hover{
+    .payment_method-fee {
+      opacity: 1;
+    }
+  }
+  label{
+    margin-bottom: 0rem;
+  }
+  &-fee{
+    @include animate();
+    opacity:0.8;
+    &-amount{
+
+    }
+    &-note{
+
+    }
+  }
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,35 @@
+.users {
+  &-avatar {
+    width: 200px;
+    height: 200px;
+    margin-top: 2rem;
+    margin-left: 0rem;
+    position:relative;
+    &-image{
+      border:2px solid gray;
+    }
+    &-delete{
+      position:absolute;
+      bottom:0.5rem;
+      left: 0;
+      right: 0;
+      margin-left: auto;
+      margin-right: auto;
+      color:white;
+      width: 30px;
+      heigh:30px;
+      border:2px solid transparent;
+      border-radius: 50%;
+      background: rgba(0,0,0,0.75);
+      &:hover{
+        border:2px solid white;
+      }
+    }
+  }
+  &-upload-avatar {
+    width: 200px;
+    height: 200px;
+    margin-top: 2rem;
+    margin-left: 0rem;
+  }
+}

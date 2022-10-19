@@ -1,0 +1,8 @@
+$this->fieldspec['##field##'] = [
+            'type'     => 'integer',
+            'minvalue' => 0,
+            'required' => ##required##,
+            'label'    => trans('admin.label.##field##'),
+            'hidden'   => 0,
+            'display'  => 1,
+        ];

@@ -1,0 +1,40 @@
+
+/*
+ |--------------------------------------------------------------------------
+ | THUMBNAIL
+ |--------------------------------------------------------------------------
+*/
+.page-thumbnail{
+
+  .thumbnail{
+    &-item{
+      @include border-radius($thumbnail-border-radius);
+      position:relative;
+      overflow: hidden;
+      &:hover{
+        .thumbnail-caption{
+          opacity: 1;
+          transform: translateY(0px);
+          transition: transform 0.4s, opacity 0.1s;
+        }
+      }
+    }
+    &-image{
+      @include img-fluid();
+    }
+    &-caption{
+      position:absolute;
+      width: 100%;
+      bottom: 0;
+      opacity: 0;
+      transform: translateY(100%);
+      background-color: rgba(0,0,0,.75);
+      backface-visibility: hidden;
+      transition: transform 0.4s, opacity 0.1s 0.3s;
+      &-title{
+        padding:0.7rem;
+        color:white;
+      }
+    }
+  }
+}

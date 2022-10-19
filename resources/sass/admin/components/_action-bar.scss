@@ -1,0 +1,22 @@
+#action-bar {
+  background-color: $color-4;
+  padding: 1em;
+  display: flex;
+  align-items: center;
+
+
+  i {
+    margin: 0;
+  }
+
+  > .actions {
+    margin-left: auto;
+    display: flex;
+    gap: 0.25rem;
+
+    > a {
+      padding: 0.5em 1em;
+      @include shadow(1);
+    }
+  }
+}

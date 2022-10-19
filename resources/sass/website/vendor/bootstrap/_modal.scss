@@ -1,0 +1,36 @@
+.maguttiModal {
+
+  .modal {
+
+    &-content {
+         border:0px;
+    }
+    &-wrapper{
+      margin:0.5rem;
+      border:2px solid $color-2;
+    }
+    &-header {
+      padding: 0.5rem;
+      border-bottom: 0px solid #BFB1AC;
+      .btn-close {
+        color:$dark;
+        font-weight: bold;
+        background: none;
+      }
+    }
+    &-body {
+      padding: 0.5rem;
+    }
+    &-button{
+      margin:2.5rem 0rem;
+    }
+    &-image{
+
+    }
+    &-footer {
+      border-top: 0px solid #BFB1AC;
+      padding: 0.5rem
+    }
+  }
+
+}

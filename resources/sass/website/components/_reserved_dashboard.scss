@@ -1,0 +1,23 @@
+
+.orders-resume {
+   td,th {
+    font-size: 0.75rem;
+    vertical-align: middle !important;
+  }
+
+   @include media-breakpoint-up(md) {
+     td , th {
+      font-size: 1rem;
+      vertical-align: middle;
+    }
+  }
+  ul{
+    margin-bottom: 0px;
+  }
+}
+
+
+
+
+
+

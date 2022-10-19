@@ -1,0 +1,118 @@
+
+/*
+ |--------------------------------------------------------------------------
+ | OVERRIDE SWIPER CSS
+ |--------------------------------------------------------------------------
+*/
+.swiper-wrapper {
+  padding-bottom: 1.5rem;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets, .swiper-pagination-custom, .swiper-pagination-fraction {
+  bottom: 0px !important;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 4px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+  outline: none;
+}
+
+.swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border-radius: 100%;
+  background: #000;
+  opacity: 0.1;
+  outline: none;
+  &-active {
+    background: $color-accent;
+    opacity: 1;
+    outline: none;
+  }
+}
+
+.swiper-button-prev,.swiper-button-next{
+  color:$color-4;
+}
+
+.swiper-pagination-bullet-active {
+
+}
+/*
+ |--------------------------------------------------------------------------
+ | HEADER CAROUSEL
+ |--------------------------------------------------------------------------
+*/
+
+.header-carousel{
+
+  margin-bottom:1rem;
+  .swiper-wrapper {
+    padding-bottom: 2.55rem;
+  }
+  .swiper-button-prev, .swiper-button-next {
+    display: none;
+    @include media-breakpoint-up(md) {
+      display:block;
+    }
+  }
+}
+
+.swiper-slide {
+  position: relative;
+
+  &-text {
+    margin-top: 1rem;
+    text-align: center;
+    display:none;
+
+    @include media-breakpoint-up(md) {
+      display:block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      right: 0;
+      transform: translate(0, -50%);
+      margin-top: 0;
+    }
+  }
+}
+
+/*
+ |--------------------------------------------------------------------------
+ | PRODUCT  CAROUSEL
+ |--------------------------------------------------------------------------
+*/
+.product-carousel {
+  padding: 40px;
+  .swiper-slide-product {
+      text-align: center;
+      font-size: 18px;
+      background: none;
+      display: flex;
+      justify-content: center;
+  }
+}
+
+/*
+ |--------------------------------------------------------------------------
+ | PRODUCT  CAROUSEL
+ |--------------------------------------------------------------------------
+*/
+.page-carousel {
+  .page-carousel-swiper-pagination {
+    bottom: 0.5rem !important;
+  }
+  .swiper-pagination-bullet {
+
+    &-active {
+      background: $color-4;
+      opacity: 1;
+      outline: none;
+    }
+  }
+}

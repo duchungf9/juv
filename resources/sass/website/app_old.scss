@@ -1,0 +1,245 @@
+@import "config/variables";
+
+ /*
+ |--------------------------------------------------------------------------
+ | Bootstrap 5
+ |--------------------------------------------------------------------------
+*/
+@import "~bootstrap/scss/functions";
+@import "vendor/bootstrap/variables";
+//  custom variables
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/bootstrap";
+
+/*
+ |--------------------------------------------------------------------------
+ | Website
+ |--------------------------------------------------------------------------
+*/
+
+// Helpers
+@import "helper/mixins";
+@import "helper/functions";
+@import "helper/keyframes";
+
+// Vendor override
+@import "vendor/bootstrap/reboot";
+@import "vendor/bootstrap/buttons";
+@import "vendor/bootstrap/forms";
+@import "vendor/bootstrap/dropdown";
+@import "vendor/bootstrap/typography";
+@import "vendor/bootstrap/navbar";
+@import "vendor/bootstrap/tables";
+@import "vendor/bootstrap/modal";
+@import "vendor/fancybox/fancybox";
+@import "vendor/font-awesome/font-awesome";
+@import "vendor/swal2/swal2";
+@import "vendor/filepond/filepond";
+
+// Components
+@import "components/common";
+@import "components/breadcrumbs";
+@import "components/slider";
+@import "components/cookie-notice";
+@import "components/accordion";
+@import "components/blocks";
+@import "components/modal";
+
+@import "components/map";
+@import "components/footer";
+@import "components/page_sharer";
+@import "components/media";
+@import "components/shopping-cart";
+@import "components/payment_method";
+@import "components/tags";
+@import "components/thumbnail";
+
+@import "components/category";
+@import "components/counter";
+@import "components/login";
+@import "components/social_login";
+@import "components/news";
+@import "components/products";
+@import "components/product_combinations";
+@import "components/reserved_dashboard";
+@import "components/users";
+
+
+/**
+Header
+ */
+
+.header {
+  padding: 0;
+
+  .header-content {
+    //margin: 0 auto;
+    //width: 1200px;
+    position: relative;
+    height: 200px;
+    .header-datetime {
+      position: absolute;
+      top:5px;
+      left: 5px;
+      z-index: 999;
+    }
+    .bgHeader {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+
+.big-news {
+  padding: 0;
+
+  .big-news-content {
+    margin: 0 auto;
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .big-new-item {
+      position: relative;
+
+      img {
+        width: 400px;
+        height: 250px;
+        object-fit: cover;
+      }
+
+      .big-new-tag {
+        position: absolute;
+        bottom: 50px;
+        left: 15px;
+      }
+
+      .big-new-link {
+        position: absolute;
+        bottom: 20px;
+        left: 15px;
+      }
+    }
+
+    .big-new-item:first-child {
+      background: rebeccapurple;
+      grid-row: 1/3;
+
+      img {
+        width: 800px;
+        height: 500px;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.home-chart {
+  padding: 30px 0;
+
+  .home-chart-content {
+    margin: 0 auto;
+    width: 1200px;
+
+    .cg-container {
+      border-color: #9d9d9d !important;
+    }
+  }
+}
+
+.review-coin {
+  padding: 0;
+
+  h3 {
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .review-coin-content {
+    margin: 0 auto;
+    width: 1200px;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    .review-coin-item {
+      a {
+        display: block;
+      }
+    }
+  }
+}
+
+/***
+News group
+ */
+.news-group {
+  padding: 0;
+
+  h3 {
+    margin: 0 auto;
+    width: 1200px;
+  }
+
+  .news-group-content {
+    margin: 0 auto;
+    width: 1200px;
+    display: grid;
+    grid-column-gap: 20px;
+    grid-row-gap: 30px;
+    grid-template-columns: 30% 30% 30%;
+    grid-template-rows: 1fr;
+
+    .new-group-head {
+      @at-root ul.new-group-lst {
+        list-style: none;
+        padding: 0;
+        li {
+          padding-bottom: 10px;
+
+          article {
+            display: grid;
+            grid-template-columns: .75fr 1.25fr;
+            grid-template-rows: 1fr 1fr;
+            grid-column-gap: 15px;
+
+            a.ngrp-link {
+              img {
+                width: 100%;
+                border-radius: 10px
+              }
+
+              grid-row: 1/3;
+            }
+
+            a.big-new-link {
+              &:hover {
+                color: red;
+              }
+            }
+
+            .big-new-datetime {
+              font-size: 11px;
+              color: #999;
+            }
+          }
+
+          &:first-child {
+            article {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
+
+

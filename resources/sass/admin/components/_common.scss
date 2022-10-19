@@ -1,0 +1,91 @@
+main,
+section {
+	padding-top: 3em;
+	padding-bottom: 3em;
+}
+
+mark {
+	background-color: transparent;
+	color: $secondary;
+	padding: 0;
+	display: inline;
+}
+
+hr {
+	border-top-color: $color-4;
+}
+
+.img-thumb {
+	display: block;
+	background-color: $color-1;
+	// padding: 0.2em;
+	max-width: 50px;
+	max-height: 50px;
+	object-fit: cover;
+	@include shadow(1);
+}
+
+ol,
+p,
+ul {
+	margin-bottom: 0.5em;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
+}
+
+ol,
+ul {
+	padding-left: 2em;
+}
+
+code,
+pre {
+	font-family: 'Lucida Console', Monaco, monospace;
+}
+
+label {
+	margin-bottom: 0.5em;
+	font-weight: 700;
+}
+
+// Old bootstrap utility classes used in the admin theme.
+// When new templates of admin are made they must be removed.
+.hide {
+	display: none!important;
+}
+
+.show {
+	display: block!important;
+}
+
+.invisible {
+	visibility: hidden;
+}
+
+.hidden {
+	display: none!important;
+}
+
+[data-toggle=buttons] > .btn input[type=checkbox],
+[data-toggle=buttons] > .btn input[type=radio],
+[data-toggle=buttons] > .btn-group > .btn input[type=checkbox],
+[data-toggle=buttons] > .btn-group > .btn input[type=radio] {
+	position: absolute;
+	clip: rect(0,0,0,0);
+	pointer-events: none;
+}
+
+.box-shadow-bordered{
+	border-radius: .25rem!important;
+	border:1px solid $gray-200;
+	padding:1rem;
+	@include media-breakpoint-up(md) {
+		padding:2.5rem;
+		box-shadow: 3px 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)!important;
+
+	};
+}
+
+

@@ -1,0 +1,96 @@
+# Windows image file caches
+Thumbs.db
+ehthumbs.db
+# Folder config file
+Desktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
+
+# =========================
+# Operating System Files
+# =========================
+
+# OSX
+# =========================
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Thumbnails
+._*
+
+# Files that might appear on external disk
+.Spotlight-V100
+.Trashes
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+.apdisk
+.project
+.settings/*
+*.pdf
+*.doc
+xxx*.*
+
+cache/*.*
+*.idea
+*.txt
+readme.md
+uploads/*
+yarn.lock
+yarn-error.log
+package-lock.json
+
+
+
+# Laravel 5
+# =========================
+
+
+/node_modules
+/public/storage
+Homestead.yaml
+Homestead.json
+.project
+.DS_Store
+clockwork
+/.idea
+
+#PHP Storm
+# =========================\
+.idea
+.en
+npm-shrinkwrap.json
+*.env
+/.env
+
+/public/storage
+/public/.htpasswd
+/public/sitemap.xml
+/public/.well-known
+Homestead.yaml
+Homestead.json
+clockwork
+
+/public/media/images/cache/*
+/public/mix-manifest.json
+/public/mix.*.js
+.env.dev
+composer.lock
+package.json.lock

@@ -1,0 +1,31 @@
+
+.modal{
+  .close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    padding: 0;
+    z-index: 1;
+    border:0px;
+    font-size:2rem;
+    background-color: transparent;
+  }
+  .modal-body {
+    overflow-y:auto;
+   
+  }
+
+  .modal-content {
+    background-clip: padding-box;
+    background-color: $color-1;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 0px;
+    box-shadow: none;
+    outline: 0 none;
+    position: relative;
+  }
+}
+
+
+
+

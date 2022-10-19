@@ -1,0 +1,8 @@
+$this->fieldspec['##field##'] = [
+			'type' => 'string',
+            'required' => 1,
+            'hidden' => 0,
+            'label'  => trans('admin.label.##field##'),
+            'display' => 1,
+            'validation' => 'required|Between:3,64|Email|is_unique'
+        ];

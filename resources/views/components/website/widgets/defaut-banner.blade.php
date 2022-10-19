@@ -1,0 +1,1 @@
+<a class="block mx-auto" href="/" title="Banner default" style="width:{{$width}}px;height:{{$height}}px"><img class="object-cover w-full h-full lozad" data-src="{{ImgHelper::get_cached('no-image')}}" alt="Default"></a>

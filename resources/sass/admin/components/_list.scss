@@ -1,0 +1,53 @@
+#main-list {
+	h2 {
+		i {
+			font-size: 1.3em;
+			@include square-icon;
+			margin-right: 0.5em;
+		}
+	}
+	.table-container {
+		background-color: white;
+		border-radius: $card-radius;
+		overflow: hidden;
+		// padding:1rem;
+
+	}
+	.selectable-column {
+		width: 0.01px;
+		input {
+			margin: 0;
+		}
+	}
+	.img-thumb {
+		margin: 0 auto;
+	}
+}
+
+.list-actions {
+	white-space: nowrap;
+}
+
+.bool-toggle {
+	span {
+		cursor: pointer;
+		height: 1.5em;
+		min-width: 1.5em;
+		line-height: 1.5em;
+		padding: 0;
+		border-radius: 128px;
+		display: inline-flex;
+		color: $color-1;
+		justify-content: center;
+    	align-items: center;
+		&.bool-on {
+			background-color:#87c0f7;// $color-true;
+		}
+		&.bool-off {
+			background-color:#e5a097;// $color-false;
+		}
+		i {
+			font-size: 10px;
+		}
+	}
+}

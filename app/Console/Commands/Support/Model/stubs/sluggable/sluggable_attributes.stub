@@ -1,0 +1,3 @@
+public array $sluggable = [
+        ##sluggable_fields##
+    ];

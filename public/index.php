@@ -2,7 +2,6 @@
 use Illuminate\Contracts\Http\Kernel;
 use Illuminate\Http\Request;
 
-echo "love";die;
 define('LARAVEL_START', microtime(true));
 
 require __DIR__.'/../debug.php';

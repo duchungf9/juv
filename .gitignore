@@ -77,8 +77,8 @@ clockwork
 .idea
 .en
 npm-shrinkwrap.json
-*.env
-/.env
+#*.env
+#/.env
 
 /public/storage
 /public/.htpasswd

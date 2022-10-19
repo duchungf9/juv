@@ -3,6 +3,7 @@
 namespace Spatie\LaravelPackageTools;
 
 use Illuminate\Support\Str;
+use Spatie\LaravelPackageTools\Commands\InstallCommand;
 
 class Package
 {
@@ -18,6 +19,8 @@ class Package
 
     public bool $hasAssets = false;
 
+    public bool $runsMigrations = false;
+
     public array $migrationFileNames = [];
 
     public array $routeFileNames = [];
@@ -31,6 +34,8 @@ class Package
     public array $viewComposers = [];
 
     public string $basePath;
+
+    public ?string $publishableProviderName = null;
 
     public function name(string $name): self
     {
@@ -48,6 +53,24 @@ class Package
         }
 
         $this->configFileNames = $configFileName;
+
+        return $this;
+    }
+
+    public function publishesServiceProvider(string $providerName): self
+    {
+        $this->publishableProviderName = $providerName;
+
+        return $this;
+    }
+
+    public function hasInstallCommand($callable): self
+    {
+        $installCommand = new InstallCommand($this);
+
+        $callable($installCommand);
+
+        $this->commands[] = $installCommand;
 
         return $this;
     }
@@ -112,6 +135,13 @@ class Package
     public function hasAssets(): self
     {
         $this->hasAssets = true;
+
+        return $this;
+    }
+
+    public function runsMigrations(bool $runsMigrations = true): self
+    {
+        $this->runsMigrations = $runsMigrations;
 
         return $this;
     }

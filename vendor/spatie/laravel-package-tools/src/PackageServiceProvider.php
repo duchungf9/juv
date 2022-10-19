@@ -19,7 +19,7 @@ abstract class PackageServiceProvider extends ServiceProvider
     {
         $this->registeringPackage();
 
-        $this->package = new Package();
+        $this->package = $this->newPackage();
 
         $this->package->setBasePath($this->getPackageBaseDir());
 
@@ -36,6 +36,11 @@ abstract class PackageServiceProvider extends ServiceProvider
         $this->packageRegistered();
 
         return $this;
+    }
+
+    public function newPackage(): Package
+    {
+        return new Package();
     }
 
     public function boot()
@@ -59,8 +64,8 @@ abstract class PackageServiceProvider extends ServiceProvider
 
             if ($this->package->hasViews) {
                 $this->publishes([
-                    $this->package->basePath('/../resources/views') => base_path("resources/views/vendor/{$this->package->shortName()}"),
-                ], "{$this->package->shortName()}-views");
+                    $this->package->basePath('/../resources/views') => base_path("resources/views/vendor/{$this->packageView($this->package->viewNamespace)}"),
+                ], "{$this->packageView($this->package->viewNamespace)}-views");
             }
 
             $now = Carbon::now();
@@ -76,6 +81,10 @@ abstract class PackageServiceProvider extends ServiceProvider
                         $migrationFileName,
                         $now->addSecond()
                     ), ], "{$this->package->shortName()}-migrations");
+
+                if ($this->package->runsMigrations) {
+                    $this->loadMigrationsFrom($filePath);
+                }
             }
 
             if ($this->package->hasTranslations) {
@@ -120,6 +129,12 @@ abstract class PackageServiceProvider extends ServiceProvider
             ], "{$this->package->name}-components");
         }
 
+        if ($this->package->publishableProviderName) {
+            $this->publishes([
+                $this->package->basePath("/../resources/stubs/{$this->package->publishableProviderName}.php.stub") => base_path("app/Providers/{$this->package->publishableProviderName}.php"),
+            ], "{$this->package->shortName()}-provider");
+        }
+
 
         foreach ($this->package->routeFileNames as $routeFileName) {
             $this->loadRoutesFrom("{$this->package->basePath('/../routes/')}{$routeFileName}.php");
@@ -149,7 +164,7 @@ abstract class PackageServiceProvider extends ServiceProvider
             $migrationFileName = Str::of($migrationFileName)->afterLast('/');
         }
 
-        foreach (glob(database_path("${migrationsPath}*.php")) as $filename) {
+        foreach (glob(database_path("{$migrationsPath}*.php")) as $filename) {
             if ((substr($filename, -$len) === $migrationFileName . '.php')) {
                 return $filename;
             }
@@ -179,5 +194,10 @@ abstract class PackageServiceProvider extends ServiceProvider
         $reflector = new ReflectionClass(get_class($this));
 
         return dirname($reflector->getFileName());
+    }
+
+    public function packageView(?string $namespace)
+    {
+        return is_null($namespace) ? $this->package->shortName() : $this->package->viewNamespace;
     }
 }
